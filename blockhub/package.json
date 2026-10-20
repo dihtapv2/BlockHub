@@ -1,0 +1,64 @@
+{
+  "name": "blockhub",
+  "version": "1.2.1",
+  "description": "BlockHub Launcher",
+  "main": "main.js",
+  "author": {
+    "name": "BlockHub",
+    "email": "info@example.com"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "minecraft-launcher-core": "^3.18.2",
+    "msmc": "^5.0.5"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "de.blockhub.launcher",
+    "productName": "BlockHub",
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "mac": {
+      "target": "dmg",
+      "artifactName": "BlockHub-mac.${ext}"
+    },
+    "linux": {
+      "target": "AppImage",
+      "artifactName": "BlockHub-linux.${ext}"
+    },
+    "extraResources": [
+      {
+        "from": "mod",
+        "to": "mod"
+      }
+    ],
+    "nsis": {
+      "artifactName": "BlockHub-Setup.${ext}",
+      "oneClick": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false
+    },
+    "portable": {
+      "artifactName": "BlockHub-Portable.${ext}"
+    }
+  }
+}

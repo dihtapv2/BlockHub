@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "de.blockhub.client.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "GameRendererMixin",
+    "InGameHudMixin",
+    "InGameOverlayRendererMixin",
+    "EntityMixin",
+    "CameraMixin",
+    "WorldMixin",
+    "ClientWorldPropertiesMixin",
+    "SimpleOptionAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

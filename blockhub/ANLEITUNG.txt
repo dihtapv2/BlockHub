@@ -1,0 +1,31 @@
+UPDATE auf BlockHub 1.2  (Mod-Menü im Spiel)
+
+NEU: BlockHub Client-Mod
+  - Im Spiel mit RECHTS-SHIFT öffnen (Taste änderbar unter Steuerung -> BlockHub).
+  - Mods aktivieren/deaktivieren und anpassen (Position, Größe, Farben, Stärke ...).
+  - Einstellungen liegen in <Instanz>/config/blockhub.json.
+  - Der Launcher installiert die Mod + Fabric API beim Spielstart automatisch.
+  - Aktuell nur für Fabric/Quilt 1.21.1. Abschalten: Instanz -> Einstellungen.
+
+Enthalten:
+  HUD:      FPS, CPS, Koordinaten, Ping, Tastenanzeige, Rüstungsanzeige, Effektanzeige, Uhr, Geschwindigkeit, RAM
+  Kamera:   Zoom (C), Freelook (Alt), Kein Hurtcam, Kein View-Bobbing
+  Grafik:   Fullbright, eigenes Fadenkreuz, Kein Feuer-Overlay
+  Welt:     Zeit ändern, Wetter ändern (nur bei dir)
+  Gameplay: Auto-Sprint, Hitboxen
+
+INSTALLATION (GitHub):
+  Alles aus diesem ZIP in dein Repository (dihClient) hochladen, bestehende Dateien überschreiben.
+  WICHTIG: Der neue Ordner  client-mod/  muss mit hoch (Ordnerstruktur beibehalten),
+           ebenso .github/workflows/build.yml (wurde geändert: baut jetzt erst die Mod).
+  Danach: Actions -> Build BlockHub -> Run workflow -> fertige Datei unter Artifacts laden.
+
+Falls der Mod-Build rot wird: auf den fehlgeschlagenen Schritt klicken, die Fehlermeldung kopieren
+und mir schicken.
+
+WINDOWS-INSTALLER (neu in 1.2.1):
+  Im Build gibt es jetzt  BlockHub-Setup.exe  -> doppelklicken, installiert BlockHub als richtige App
+  (Startmenü + Desktop-Verknüpfung, startet danach automatisch). Danach BlockHub immer darüber starten.
+  BlockHub-Portable.exe gibt es weiterhin, hat aber keine Verknüpfung.
+  Deine Instanzen/Accounts bleiben erhalten, auch bei Updates.
+  Windows zeigt evtl. "Unbekannter Herausgeber" (SmartScreen): "Weitere Informationen" -> "Trotzdem ausführen".
